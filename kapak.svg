@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Osmanlıca: Oku, anla, tekrar et">
+<rect width="1200" height="360" rx="20" fill="#122e2b"/>
+<path d="M850 0v360M890 0v360M930 0v360M970 0v360M1010 0v360M1050 0v360M1090 0v360M1130 0v360M1170 0v360M800 60h400M800 100h400M800 140h400M800 180h400M800 220h400M800 260h400M800 300h400" stroke="#e6c78f" opacity=".08"/>
+<circle cx="1050" cy="180" r="112" fill="none" stroke="#c9aa70" opacity=".55"/>
+<circle cx="1050" cy="180" r="96" fill="none" stroke="#c9aa70" opacity=".3"/>
+<path d="M990 135q30-16 60 0q30-16 60 0v87q-30-16-60 0q-30-16-60 0zM1050 135v87" fill="none" stroke="#e5c894" stroke-width="3" stroke-linejoin="round"/>
+<text x="64" y="66" font-family="Arial,sans-serif" font-size="14" letter-spacing="4" fill="#d3ba87">DİLDEN METNE · METİNDEN ANLAMA</text>
+<text x="60" y="172" font-family="Georgia,serif" font-size="86" fill="#f7f0e2">Osmanlıca</text>
+<text x="64" y="224" font-family="Arial,sans-serif" font-size="28" fill="#dfcda7">Oku, anla, tekrar et.</text>
+<path d="M64 266h666" stroke="#e6c78f" opacity=".3"/>
+<text x="64" y="307" font-family="Arial,sans-serif" font-size="17" fill="#e7e7d9">38 DERS</text>
+<text x="225" y="307" font-family="Arial,sans-serif" font-size="17" fill="#e7e7d9">55 KAYNAK KİTAP</text>
+<text x="475" y="307" font-family="Arial,sans-serif" font-size="17" fill="#e7e7d9">ÇEVRİMDIŞI ÇALIŞMA</text>
+</svg>

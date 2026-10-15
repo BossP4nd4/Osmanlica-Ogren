@@ -1,0 +1,27 @@
+OSMANLICA TAM PROJE ARŞİVİ - 15 EKİM 2026
+
+Sıfırdan kendi iPhone'una kurmak için:
+01-Sifirdan-Kurulum/00-ONCE-BUNU-OKU.txt ile başla.
+Aynı yerde 17 sayfalık görselli PDF ve düz metin kılavuz vardır.
+01 klasörü bağımsız taşınabilir; diğer klasörlere başvurmak zorunda değildir.
+Ücretsiz hesap yolu 7 günlük yenileme gerektirir.
+
+02: Kaynak kodu, araştırmalar, test kayıtları ve tarihli geliştirme çıktıları.
+03: Sağlanan özgün kaynak kitaplar ve belgeler.
+04: Tarihli cihaz denetim kopyaları; güncel kişisel yedek değildir.
+05: Rust bağımlılıklarının ek arşiv kopyası; 01 içinde de bulunurlar.
+06: Eski hesapla imzalı Xcode arşivi; gelecek kurulumun tek dayanağı değildir.
+
+Boyut: 01 yaklaşık 4,3 GB. Tüm arşiv ortak disk bağlantıları sayesinde bu
+diskte yaklaşık 50 GB; başka diske kopyalanınca mantıksal boyuta genişleyebilir.
+128 GB veya daha büyük taşıyıcı tercih et. Ana kopyayı koru, çalışma kopyası aç.
+
+envanter.json tarihî kaynak kopyasının dosya/hash kayıtlarını içerir.
+29 eski dış dosya yolu bulunamadı olarak kayıtlıdır; bunu tüm tarihî
+malzemelerin eksiksiz olduğu şeklinde yorumlama. Aktif 55 PDF ile sözlük
+paketinin 3 PDF'si ayrıca denetlendi. Hesap parolaları ve özel imzalama
+anahtarları dahil değildir. Bu özel arşiv kamuya dağıtım için hazırlanmadı.
+
+SAKLAMA NOTU: Oluşturma sırasında Masaüstü iCloud eşzamanlaması kota dolu
+hatası gösterdi. Yerel dosyalar vardır; bulut kopyası tamamlandı sayılmamalıdır.
+Harici disk kopyasını ayrıca doğrula.
