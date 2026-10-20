@@ -2,9 +2,9 @@
 
 **Osmanlıca okumayı dersler, kaynak açıklamaları ve uygulamalı çalışmalarla öğren.**
 
-**Güncel: 1.2.0 (7)** · iOS 26+ · 20 Ekim 2026 yayını
+**Güncel: 1.2.2 (9)** · iOS 26+ · 20 Ekim 2026 yayını
 
-[Android sürümü](https://github.com/BossP4nd4/Osmanlica-Ogren-Android) · [Tüm indirmeler](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/tag/v1.2.0)
+[Android sürümü](https://github.com/BossP4nd4/Osmanlica-Ogren-Android) · [Tüm indirmeler](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/tag/v1.2.2)
 
 ## Önce hangi dosyaları indireceğini seç
 
@@ -12,10 +12,10 @@
 
 | Sıra | Dosya | İndirme boyutu |
 | --- | --- | --- |
-| 1 | [⬇ Kaynak proje — Mac’e indir](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Kaynak-Kod.zip) | 33.3 MB |
-| 2A | [⬇ Hafif ders içeriği](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Hafif-Icerik.zip) | 92.8 MB |
-| 2B | [⬇ Tam kitaplık](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Tam-Kitaplik.zip) | 1730.9 MB |
-| 3 | [⬇ Sözlük paketi — iki seçenek için de aynı](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Sozluk.zip) | 403.5 MB |
+| 1 | [⬇ Kaynak proje — Mac’e indir](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.2/Osmanlica-iOS-Kaynak-Kod-1.2.2.zip) | 33.3 MB |
+| 2A | [⬇ Hafif ders içeriği](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.2/Osmanlica-iOS-Hafif-Icerik.zip) | 92.8 MB |
+| 2B | [⬇ Tam kitaplık](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.2/Osmanlica-iOS-Tam-Kitaplik.zip) | 1730.9 MB |
+| 3 | [⬇ Sözlük paketi — iki seçenek için de aynı](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.2/Osmanlica-iOS-Sozluk.zip) | 403.5 MB |
 
 **2A veya 2B’den yalnız birini seç.** Sözlüğü kullanmak için 3’ü de indir. Uygulamanın içinde kitapların ikinci bir PDF kopyası yoktur; ilk açılışta ders paketini ayrıca kurarsın.
 
@@ -58,13 +58,17 @@ Tek PDF’yi, ZIP dosyasını veya bir üst klasörü seçme. Sonrasında bir de
 
 1. Eski uygulamada **Bugün → Ayarlar → Dosyalar’a tam yedek aktar** ile yedek al; Mac’te ayrı bir kopya tut.
 2. Yeni kaynak projeyi aynı Apple hesabı ve **aynı Bundle Identifier** ile mevcut uygulamanın üzerine yükle. Uygulamayı önceden silme.
-3. Bu yayının yeni ders paketlerinden birini indir. **Ayarlar → ders/içerik güncellemeleri → Hafif içerik / Tam kitaplık** üzerinden açılmış klasörü seçip kurulumu tamamla.
+3. **1.2.0 hafif/tam içeriği zaten kuruluysa kitapları ve sözlüğü yeniden indirme.** İçerik bu görsel güncellemede değişmedi. İçerik kurulumu gerekiyorsa yukarıdaki ders paketlerinden birini indir. **Ayarlar → ders/içerik güncellemeleri → Hafif içerik / Tam kitaplık** üzerinden açılmış klasörü seçip kurulumu tamamla.
 4. Kayıtlarını, notlarını ve tekrarlarını kontrol et. Paket geçişinde bunlar korunur; hafifte olmayan sayfalardaki yer imleri tam kitaplık için saklanır.
 5. Sözlük paketi bu güncellemede genişletilmedi; kurulu sözlük düzgün açılıyorsa tekrar kurman gerekmez.
 
 İki uygulama simgesi veya boş ilerleme görürsen farklı hesap/kimlik kullanılmış olabilir; eski uygulamayı silmeden yedeğini koru. İçerik ve kayıtlar doğrulandıktan sonra yalnız aktarım ZIP’lerini/açılmış aktarım klasörlerini kaldır; uygulamanın verilerini silme.
 
-## Bu güncellemede neler var?
+## Bordo görünüm güncellemesi
+
+Bordo, açık taş ve kömür paleti; açık/koyu görünüm, serif okuma metinleri ve yenilenen vurgular. Dersler, kaynak PDF’ler, cevaplar ve kişisel kayıt şeması değişmedi. Mevcut içerikle yalnız uygulamayı güncelleyebilirsin.
+
+## Öğrenme içeriği
 
 - **38 ders ve 874 çalışma.** Derslere 171 kaynak açıklaması, 15 etkileşimli tablo ve 401 tablo hücresi; 149 kısa örnek ve bütünlüklü okumalar eşlik ediyor.
 - **Hafif içerik / Tam kitaplık:** aynı dersler, açıklamalar ve çalışmalar; farklı kitap erişimi ve depolama kullanımı.
@@ -83,12 +87,14 @@ Tek PDF’yi, ZIP dosyasını veya bir üst klasörü seçme. Sonrasında bir de
 
 ## Kılavuz ve isteğe bağlı dosyalar
 
-- [20 sayfalık görselli kurulum kılavuzu](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Kurulum-Kilavuzu.pdf). Kılavuzdaki `Yeniden-Derleme/Proje` yolu bu GitHub kaynak ZIP’inde doğrudan **Proje** klasörüdür. `Ders-Paketleri` ve `Sozluk-Paketi` ayrı indirmeler olarak sunulmuştur.
-- [Hazır imzalı IPA (isteğe bağlı)](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-1.2.0.ipa). Özgün geliştirici hesabına bağlıdır; herkesin indirip dokunarak kurabileceği bir paket değildir. Yeni ücretsiz hesapla kurulum için kaynak proje yolunu kullan.
-- [Dosya doğrulama değerleri (SHA-256)](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/SHA256SUMS.txt).
+- [20 sayfalık görselli kurulum kılavuzu](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.2/Osmanlica-iOS-Kurulum-Kilavuzu.pdf). Kılavuz ekranlarında önceki renkler bulunabilir; kurulum adımları geçerlidir. Kılavuzdaki `Yeniden-Derleme/Proje` yolu bu GitHub kaynak ZIP’inde doğrudan **Proje** klasörüdür. `Ders-Paketleri` ve `Sozluk-Paketi` ayrı indirmeler olarak sunulmuştur.
+- [Hazır imzalı IPA (isteğe bağlı)](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.2/Osmanlica-iOS-1.2.2.ipa). Özgün geliştirici hesabına bağlıdır; herkesin indirip dokunarak kurabileceği bir paket değildir. Yeni ücretsiz hesapla kurulum için kaynak proje yolunu kullan.
+- [Dosya doğrulama değerleri (SHA-256)](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.2/SHA256SUMS-1.2.2.txt).
 
 Kaynak ZIP’inde uygulamaya gömülmeyen eski `App/Resources/Prepared` PDF kopyaları tekrarlanmaz; ders kitapları ayrı içerik paketlerindedir. Özel yerel imzalama ayarı ve kişisel cihaz yedekleri paylaşılmaz.
 
-**Test durumu:** Yerel rapora göre yeni iOS paketi imzalı derlendi; kurulum/depolama/geçiş çekirdek testleri geçti. Bu yeni sürüm fiziksel iPhone’a kurulmadı; yeni ücretsiz hesapla telefon kurulumu denenmedi. Son yeni kurulum ekranının görsel denetimi tamamlanamadı. Bu GitHub yayını için uygulama yeniden derlenmedi; hazırlanmış güncel dosyalar paketlendi.
+**Test durumu:** Yerel rapora göre iOS 1.2.2 (9) paketi imzalı derlendi ve arşiv imzası doğrulandı. Önceki kurulum/depolama/geçiş testleri bu renk sürümünde yeniden yapılmış sayılmaz. Bu yeni sürüm fiziksel iPhone’a kurulmadı; yeni ücretsiz hesapla telefon kurulumu denenmedi. Son yeni kurulum ekranının görsel denetimi tamamlanamadı. Bu GitHub yayını için uygulama yeniden derlenmedi; hazırlanmış güncel dosyalar paketlendi.
 
 [Sorun bildir](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/issues): iOS/Xcode sürümünü, hafif/tam seçimini ve hata metnini belirt. Özel yedeğini veya hesap bilgilerini paylaşma.
+
+**Eski dosyalar:** Adında 1.2.0 geçen kaynak ZIP’i, IPA ve doğrulama listesi önceki aday sürümdür. Güncel kurulum için yukarıdaki 1.2.2 bağlantılarını kullan.

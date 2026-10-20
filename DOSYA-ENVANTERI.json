@@ -1,18 +1,13 @@
 [
   {
-    "file": "Osmanlica-iOS-1.2.0.ipa",
-    "bytes": 3446492,
-    "sha256": "3f04e56a2a8fb928c738b4a7e15b28fa541d3ca4eb09679ec63b1947d5cda516"
-  },
-  {
     "file": "Osmanlica-iOS-Hafif-Icerik.zip",
     "bytes": 92830514,
     "sha256": "f57d847377ef120d4f7fcbcb5232b22c4be46f92edd00e8e6e119497943fc1fd"
   },
   {
-    "file": "Osmanlica-iOS-Kaynak-Kod.zip",
-    "bytes": 33265734,
-    "sha256": "5fd5de3727e8264f1bab3d8a999347ae529b8f777a9334066c15911a2703db70"
+    "file": "Osmanlica-iOS-Kaynak-Kod-1.2.2.zip",
+    "bytes": 33265973,
+    "sha256": "4422a66287a117c956eeea876e81dd64b438d98d3451070cbed543a65b2f49ba"
   },
   {
     "file": "Osmanlica-iOS-Kurulum-Kilavuzu.pdf",
@@ -28,5 +23,10 @@
     "file": "Osmanlica-iOS-Tam-Kitaplik.zip",
     "bytes": 1730884124,
     "sha256": "223a789c2c3dc530915dc19c6298693b40d9b2a426545afd49cce1a9842b60c2"
+  },
+  {
+    "file": "Osmanlica-iOS-1.2.2.ipa",
+    "bytes": 3447325,
+    "sha256": "fc53e643e42c462132e75561f62326546b541c0618dae593dce0c04bed81b935"
   }
 ]
