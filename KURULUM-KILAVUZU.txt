@@ -1,330 +1,94 @@
+# Osmanlıca · iPhone / iPad
 
+**Osmanlıca okumayı dersler, kaynak açıklamaları ve uygulamalı çalışmalarla öğren.**
 
-1. Bu klasörü ilk kez açıyorsan
+**Güncel: 1.2.0 (7)** · iOS 26+ · 20 Ekim 2026 yayını
 
-Bu arşiv, Osmanlıca öğrenme uygulamasını yeni bir Mac üzerinden kendi iPhone’una yeniden kurman içindir. Önceki konuşmaları, eski bilgisayarı veya eski geliştirici hesabını bilmen gerekmez.
+[Android sürümü](https://github.com/BossP4nd4/Osmanlica-Ogren-Android) · [Tüm indirmeler](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/tag/v1.2.0)
 
-Hedef
-Ücretli Apple Developer üyeliği satın almadan, kendi ücretsiz Apple hesabınla Xcode üzerinden telefona kurulum. Uygulama telefonda gerçek bir uygulama olarak çalışır; simülatör değildir.
+## Önce hangi dosyaları indireceğini seç
 
-Önemli sınır
-15 Ekim 2026 itibarıyla ücretsiz Personal Team kurulumları 7 gün geçerlidir. Süre dolunca Mac’e bağlayıp aynı projeyi yeniden çalıştırırsın. Süresiz, bir kez kurulan ücretsiz iPhone imzası vaat edilmiyor.
+**İlk kurulum için Apple Silicon Mac, uygun Xcode, Apple hesabı ve iPhone gerekir.** Bu yayın App Store bağlantısı değildir. Normal kurulum yolu kaynak projeyi Xcode’da kendi hesabınla derlemektir.
 
-Bu sürüm
-1.0.0 (5) içeriği: 38 ders, 55 kaynak PDF ve toplam 870 çalışma grubu. Sözlük paketi 10.294 Latin başlıklı arama kaydı ile üç özgün PDF içerir. Tam sözlük aktarımı değildir.
+| Sıra | Dosya | İndirme boyutu |
+| --- | --- | --- |
+| 1 | [⬇ Kaynak proje — Mac’e indir](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Kaynak-Kod.zip) | 33.3 MB |
+| 2A | [⬇ Hafif ders içeriği](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Hafif-Icerik.zip) | 92.8 MB |
+| 2B | [⬇ Tam kitaplık](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Tam-Kitaplik.zip) | 1730.9 MB |
+| 3 | [⬇ Sözlük paketi — iki seçenek için de aynı](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Sozluk.zip) | 403.5 MB |
 
-İki yol
-Ana yol: sayfa 3-12, kendi iPhone’una ücretsiz kurulum. Yedek yol: sayfa 13, Mac üzerinde iPhone simülatörü. Uygulamayı yeniden geliştirmek istersen sayfa 15-16.
+**2A veya 2B’den yalnız birini seç.** Sözlüğü kullanmak için 3’ü de indir. Uygulamanın içinde kitapların ikinci bir PDF kopyası yoktur; ilk açılışta ders paketini ayrıca kurarsın.
 
-Bu rehberin çizimleri şematiktir; gerçek ekran görüntüsü değildir. Xcode ve iOS sürümlerinde düğmelerin yeri değişebilir.
+> **iOS’ta ZIP’i Dosyalar uygulamasında açıp içindeki klasörü seçersin.** Android’deki ZIP’i doğrudan seçme yöntemi burada geçerli değildir.
+> GitHub’ın **Code → Download ZIP** veya otomatik **Source code** dosyaları yukarıdaki paketlerin yerine geçmez.
 
-2. Hangi klasör ne işe yarıyor?
+## 1. Uygulamayı Mac’ten iPhone’a kur
 
-Başlangıç için yalnız 01-Sifirdan-Kurulum klasörünü taşıman yeterlidir. Bu klasör kaynak kodu ve gerekli uygulama içeriğini kendi içinde barındırır.
+1. Kaynak ZIP’ini Mac’te aç. **Proje → Osmanlica.xcodeproj** dosyasını Xcode ile aç; `Package.swift` dosyasını seçme.
+2. Xcode → Settings → Accounts bölümünden Apple hesabını ekle.
+3. Projede **Osmanlica** hedefi → **Signing & Capabilities** → **Automatically manage signing** seçili olsun. **Team** olarak kendi hesabını seç.
+4. İlk kurulumda kendine özgü Bundle Identifier belirle; örneğin `com.adin.osmanlica`. Hesabı ve kimliği sakla; güncellemelerde aynılarını kullan.
+5. iPhone’u kabloyla bağla, güven istemini onayla. Gerekiyorsa iPhone’daki **Ayarlar → Gizlilik ve Güvenlik → Geliştirici Modu** adımlarını tamamla.
+6. Xcode üst çubuğunda **Osmanlica** şeması ve kendi iPhone’un seçiliyken **Run / ▶** düğmesine bas. İstenirse iPhone’da geliştiriciye güven adımını tamamla.
 
-01-Sifirdan-Kurulum
-Bu kılavuz, Yeniden-Derleme/Proje, Sozluk-Paketi ve Hazir-IPA burada. Normal kurulum Yeniden-Derleme/Proje içindeki Osmanlica.xcodeproj ile yapılır.
+Bu taşınabilir proje paylaşım uzantısı/App Group gerektirmeyen kurulum kopyasıdır; uygulamanın içinden dosya ekleyebilirsin. Hazır yerel kütüphaneler vardır; normal kurulumda Rust derlemek gerekmez.
 
-02 ve 03
-02-Kaynak-Kod-ve-Gelistirme geliştirme geçmişi, testler ve eski çıktılardır. 03-Ozgun-Kaynaklar araştırmada kullanılan kaynak dosyalarını saklar. İlk kurulumda bunları açman gerekmez.
+**Ücretsiz Apple hesabında yenileme:** Personal Team imzasının profili 7 gün sonra sona erer; aynı hesap ve Bundle Identifier ile Xcode’dan yeniden derleyip yükle. Uygulamayı silme. [Apple’ın açıklaması](https://developer.apple.com/help/account/basics/about-your-developer-account).
 
-04, 05 ve 06
-04-Tarihli-Cihaz-Yedekleri eski denetim kayıtlarını içerir; güncel kişisel yedeğin değildir. 05-Bagimliliklar teknik arşivdir. 06-Eski-Hesapla-Imzali-Xcode-Arsivi eski imzalı derlemedir.
+## 2. Hafif veya tam ders paketini kur
 
-Boyut ve taşıma
-01 yaklaşık 4,3 GB’dır. Tam arşiv bu diskte yaklaşık 50 GB yer kaplar; aynı dosyalara ait ortak disk bağlantıları normal kopyada çoğalırsa daha fazla alan gerekir. Tam arşiv için 128 GB veya daha büyük bir taşıyıcı planla. Esas kopyayı saklayıp çalışma kopyası üzerinde ilerle.
+1. Seçtiğin ders ZIP’ini Finder → iPhone → Dosyalar → Osmanlıca üzerinden telefona aktar.
+2. Telefonda **Dosyalar → iPhone’umda → Osmanlıca** içinde ZIP’e dokunup aç.
+3. Uygulamanın ilk açılışında **Ders kurulum klasörünü seç**’e dokun.
+4. Açılan **Hafif-Icerik** veya **Tam-Kitaplik** klasörüne gir. **catalog.json ve Assets** birlikte görünürken **Aç**’a bas.
+5. Ön kontroldeki içerik seçimini ve boş alanı kontrol et; **Kitapları ve çalışmaları kur** ile tamamla.
 
+Tek PDF’yi, ZIP dosyasını veya bir üst klasörü seçme. Sonrasında bir ders ve kaynak sayfasını açarak kontrol et.
 
+## 3. Sözlüğü ekle
 
-3. Yeni Mac’i hazırla
+1. Sözlük ZIP’ini de telefona aktar ve Dosyalar’da aç.
+2. **Sözlük → Sözlük paketini kur → Kurulum klasörünü seç** yolunu aç.
+3. **Sozluk-Paketi** içine gir: **Lexicons, Sources ve dictionary-install.json** birlikte görünürken klasörü seç.
+4. Kurulumdan sonra `kitab` aramasını, sözlük maddesini ve tam kaynak sayfasını kontrol et.
 
-Ücretli üyelik gerekmez; fakat ilk kurulum için internet, Apple hesabı, uygun Mac ve iPhone gerekir. Sonrasında hazır dersleri ve kurulu sözlükleri çevrimdışı kullanabilirsin.
+**Depolama:** Sözlük dahil temel dosya toplamı hafifte yaklaşık **608 MB**, tam kitaplıkta yaklaşık **2,37 GB**. Bunlar telefonun Ayarlar ekranıyla birebir aynı ölçüm değildir. Aktarım ZIP’leri, açılmış kopyalar, kişisel kayıtlar ve önbellek ek yer ister. Kullanılmış kurulumda eski cevapların kaynak kanıtları da saklanabilir.
 
-1. Mac uyumluluğu
-Apple menüsü > Bu Mac Hakkında bölümünde M1, M2, M3 veya sonraki Apple Silicon işlemcilerinden biri bulunmalı. Bu paketin hazır yerel kütüphanesi Intel Mac için derlenmemiştir.
+## Mevcut kurulumdan güncelleme ve paket değiştirme
 
-2. Xcode’u edin
-Mac App Store’da Apple’ın yayımladığı Xcode’u bulup yükle. Gerekirse ücretsiz Apple hesabını oluştur. İlk açılışta ek bileşenleri indir; lisans ve sistem izinlerini okuyarak kendin tamamla. Xcode yükleyicisi arşivde değildir.
+1. Eski uygulamada **Bugün → Ayarlar → Dosyalar’a tam yedek aktar** ile yedek al; Mac’te ayrı bir kopya tut.
+2. Yeni kaynak projeyi aynı Apple hesabı ve **aynı Bundle Identifier** ile mevcut uygulamanın üzerine yükle. Uygulamayı önceden silme.
+3. Bu yayının yeni ders paketlerinden birini indir. **Ayarlar → ders/içerik güncellemeleri → Hafif içerik / Tam kitaplık** üzerinden açılmış klasörü seçip kurulumu tamamla.
+4. Kayıtlarını, notlarını ve tekrarlarını kontrol et. Paket geçişinde bunlar korunur; hafifte olmayan sayfalardaki yer imleri tam kitaplık için saklanır.
+5. Sözlük paketi bu güncellemede genişletilmedi; kurulu sözlük düzgün açılıyorsa tekrar kurman gerekmez.
 
-3. Sürümleri kontrol et
-Arşiv Xcode 27.0 ve macOS 26.6.2 ile hazırlanmıştır. Uygulama iOS 26.0 veya üzerini ister. Xcode’un telefonundaki iOS sürümünü desteklemesi gerekir; ileride daha yeni Xcode gerekebilir.
+İki uygulama simgesi veya boş ilerleme görürsen farklı hesap/kimlik kullanılmış olabilir; eski uygulamayı silmeden yedeğini koru. İçerik ve kayıtlar doğrulandıktan sonra yalnız aktarım ZIP’lerini/açılmış aktarım klasörlerini kaldır; uygulamanın verilerini silme.
 
-4. Boş alan bırak
-Mac’te Xcode, derleme ve gerekirse simülatör için en az 35-50 GB boş alan planla; bu bir garanti değil, başlangıç payıdır. Telefonda uygulama, sözlük ve yedek için birkaç GB’dan fazla boş alan bırak. İçe aktarma ekranındaki gerçek alan hesabını esas al.
+## Bu güncellemede neler var?
 
+- **38 ders ve 874 çalışma.** Derslere 171 kaynak açıklaması, 15 etkileşimli tablo ve 401 tablo hücresi; 149 kısa örnek ve bütünlüklü okumalar eşlik ediyor.
+- **Hafif içerik / Tam kitaplık:** aynı dersler, açıklamalar ve çalışmalar; farklı kitap erişimi ve depolama kullanımı.
+- Hafif içerik, düşük çözünürlüklü ekran görüntüsü veya ders özeti değildir. Dersler için gereken **573 özgün PDF sayfası**, özgün sayfa numaralarıyla korunur.
+- Tam kitaplık, 55 ders PDF’sinin **14.318 sayfasına** erişim sağlar. Üç sözlük PDF’si her iki seçenekte de tamdır; sözlük kapsamı bu güncellemede artırılmadı.
+- İlgili dosyalar doğrulanıp kurulduktan sonra içerik seçimi değişir. Hafifte erişilemeyen sayfalardaki yer imleri, tam kitaplığa dönüldüğünde kullanılmak üzere saklanır.
 
+## Hafif mi, tam mı?
 
-4. Çalışma kopyasını aç
+| İhtiyacın | Seçim |
+| --- | --- |
+| Dersleri ve alıştırmaları çalışmak; telefonda daha az yer kullanmak | **Hafif içerik** |
+| Kaynak kitapların ders dışında kalan sayfalarını da okumak | **Tam kitaplık** |
 
-Eski bilgisayarın kullanıcı adı veya dosya yolu kullanılmaz. Nerede saklarsan sakla, bütün 01 klasörünü birlikte taşı.
+İki içerik paketini birlikte indirmen gerekmez. Sonradan diğerine geçebilirsin. Kişisel kayıtlar, yedekler, aktarım dosyaları ve önbellek ayrıca yer kaplar.
 
-1. Yerel bir kopya oluştur
-01-Sifirdan-Kurulum klasörünü USB’den Mac’te kendi seçtiğin yerel klasöre kopyala. iCloud simgesi varsa tüm içeriğin indirilmesini bekle. Sadece kısayol veya bulut yer tutucusu yeterli değildir.
+## Kılavuz ve isteğe bağlı dosyalar
 
-2. Doğru dosyaya gir
-Finder’da 01-Sifirdan-Kurulum > Yeniden-Derleme > Proje > Osmanlica.xcodeproj yolunu aç. Son dosyaya çift tıkla. Xcode’u seçmen istenirse Xcode ile aç.
+- [20 sayfalık görselli kurulum kılavuzu](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Kurulum-Kilavuzu.pdf). Kılavuzdaki `Yeniden-Derleme/Proje` yolu bu GitHub kaynak ZIP’inde doğrudan **Proje** klasörüdür. `Ders-Paketleri` ve `Sozluk-Paketi` ayrı indirmeler olarak sunulmuştur.
+- [Hazır imzalı IPA (isteğe bağlı)](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-1.2.0.ipa). Özgün geliştirici hesabına bağlıdır; herkesin indirip dokunarak kurabileceği bir paket değildir. Yeni ücretsiz hesapla kurulum için kaynak proje yolunu kullan.
+- [Dosya doğrulama değerleri (SHA-256)](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/SHA256SUMS.txt).
 
-3. Proje, paket ve IPA ayrımı
-Package.swift uygulamanın tamamını açacağın dosya değildir. Hazir-IPA içindeki dosya eski hesabın imzasını taşır; yeni ücretsiz hesabın için doğrudan kurulum yolu değildir. Kaynak proje üzerinden yeniden derle.
+Kaynak ZIP’inde uygulamaya gömülmeyen eski `App/Resources/Prepared` PDF kopyaları tekrarlanmaz; ders kitapları ayrı içerik paketlerindedir. Özel yerel imzalama ayarı ve kişisel cihaz yedekleri paylaşılmaz.
 
-4. Hazır ücretsiz yapılandırma
-Bu Proje kopyası tek uygulama hedefiyle hazırlanmıştır; App Group ve paylaşım uzantısı gerektirmez. Ana geliştirme arşivindeki proje ise özgün tam yapılandırmayı saklar. İlk kurulumda ayar yardımcısını çalıştırman gerekmez.
+**Test durumu:** Yerel rapora göre yeni iOS paketi imzalı derlendi; kurulum/depolama/geçiş çekirdek testleri geçti. Bu yeni sürüm fiziksel iPhone’a kurulmadı; yeni ücretsiz hesapla telefon kurulumu denenmedi. Son yeni kurulum ekranının görsel denetimi tamamlanamadı. Bu GitHub yayını için uygulama yeniden derlenmedi; hazırlanmış güncel dosyalar paketlendi.
 
-
-
-5. Ücretsiz Apple hesabını seç
-
-Burada hesabı uygulamaya bağlarız. Üyelik satın alma ekranına gitmen gerekmez. Hesap parolanı yalnız Apple veya macOS’un kendi penceresinde kullan.
-
-1. Xcode’a giriş yap
-Xcode > Settings > Apple Accounts bölümünü aç. + veya Add Apple Account ile hesabını ekle. Eski hesabı kullanmak zorunda değilsin. Doğrulama kodunu Apple’ın penceresinde tamamla.
-
-2. Uygulama hedefini seç
-Proje penceresinin solunda mavi Osmanlica proje simgesine tıkla. Ortadaki TARGETS bölümünden Osmanlica’yı seç; Signing & Capabilities sekmesini aç.
-
-3. Personal Team seç
-Automatically manage signing işaretli olsun. Team alanında Adın (Personal Team) seç. Ücretli üyelik olmadan görünen kişisel takım budur. Bu kopyada App Groups yetkisi ve OsmanlicaShare hedefi bulunmamalı.
-
-4. Benzersiz uygulama kimliği
-Bundle Identifier alanını ilk kurulumda kendine özgü yap: örneğin com.adin.osmanlica2031. Boşluk ve Türkçe karakter kullanma. Seçtiğin kimliği ve hesabı bir yere kaydet. Sonraki haftalarda bunları değiştirme; değişiklik ayrı bir uygulama kurulmasına neden olabilir.
-
-Bu sürümde paylaşım menüsündeki “Osmanlıca’ya kaydet” uzantısı yoktur. Kütüphane içindeki + > Dosya içe aktar ve Metin veya bağlantı seçeneklerini kullan.
-
-6. iPhone’u Mac’e tanıt
-
-İlk kurulumu kabloyla yapmak daha anlaşılır ve daha güvenilirdir. SIM kart şart değildir; Apple doğrulaması için gerektiğinde Wi-Fi kullanılabilir.
-
-1. Bağla ve güven
-Veri aktarabilen kabloyla iPhone’u bağla, kilidini aç. “Bu bilgisayara güvenilsin mi?” çıkarsa kendi telefonunda Güven seçip ekran kilidi kodunu gir.
-
-2. Xcode’un telefonu görmesini bekle
-Window > Devices and Simulators içinde cihazının adı görünmeli. Hazırlık veya eşleştirme sürüyorsa tamamlanmasını bekle. Telefon yoksa kabloyu, kilidi ve Xcode-iOS uyumunu kontrol et.
-
-3. Developer Mode
-iOS isterse Ayarlar > Gizlilik ve Güvenlik > Geliştirici Modu’nu aç. Yeniden başlatma ve son onayı telefonda tamamla. Menü ilk Xcode bağlantısından sonra görünebilir. Telefonun kişisel kilit kodunu kimseye verme.
-
-4. Doğru hedef
-Xcode üst çubuğunda şema Osmanlica, hemen yanında kendi iPhone’unun adı olmalı. “Any iOS Device” veya adı Simulator ile biten bir aygıt telefon kurulum hedefin değildir.
-
-
-
-7. Derle, kur ve ilk kez aç
-
-Xcode kaynak kodu uygulamaya dönüştürür, senin ücretsiz hesabınla imzalar ve bağlı telefona yükler. İlk derleme ve kitap aktarımı zaman alabilir.
-
-1. Çalıştır
-Üst soldaki üçgen Run düğmesine bas veya Command + R kullan. İlerleme bitene kadar kabloyu çıkarma; telefonun kilidi açık kalsın. Arşivde 55 büyük PDF olduğu için ilk yükleme küçük bir deneme uygulamasından uzun sürer.
-
-2. Sistem pencereleri
-codesign Anahtar Zinciri parolası isterse genellikle Mac oturumunun/anahtar zincirinin parolası istenir; Apple hesabının doğrulama kodu değildir. Pencerenin sistem penceresi olduğundan emin olarak kendin yanıtla.
-
-3. Güven hatası varsa
-iOS “Untrusted Developer” gösterirse Ayarlar > Genel > VPN ve Aygıt Yönetimi altında ilgili geliştirici kaydını kontrol edip kendin güven ver. Bu bölüm yalnız bir kayıt oluştuğunda görünür. Apple doğrulaması internet isteyebilir.
-
-4. İlk kullanım
-Telefonda Osmanlıca açılınca Dersler’den bir ders aç. Kaynak sayfasını ve “Kitapta bu sayfayı aç” geçişini dene. Kütüphane > Kitaplar’da kitapları görmelisin. Sonra Xcode’u durdurup telefondaki uygulama simgesinden tekrar aç; günlük kullanım için Mac’in bağlı kalması gerekmez.
-
-
-
-8. Sözlük paketini telefona taşı
-
-Ders kitapları uygulamanın içinde gelir. Üç sözlük PDF’si ve arama indeksi ayrıca Sozluk-Paketi klasöründe saklanır; bu paketi bir kez içe aktar.
-
-1. Mac’te ZIP oluştur
-Finder’da 01-Sifirdan-Kurulum içindeki Sozluk-Paketi klasörüne sağ tıkla > Sıkıştır. Oluşan ZIP’i kullan. Klasörün içindeki dosya adlarını değiştirme.
-
-2. Finder üzerinden aktar
-Telefon bağlıyken Finder’ın solundan iPhone’u seç > Files / Dosyalar sekmesi. ZIP’i buradaki Osmanlıca uygulaması satırına sürükle. Sync / Eşzamanla düğmesine basman gerekmez. Satır görünmüyorsa uygulamayı bir kez aç ve bağlantıyı yenile.
-
-3. Telefonda ZIP’i aç
-Dosyalar > Göz At > iPhone’umda > Osmanlıca yoluna gir. Sozluk-Paketi.zip dosyasına bir kez dokun; açılma bitince bir klasör oluşur. Bu adım sözlüğü henüz uygulamaya kurmaz.
-
-4. Doğru klasörü tanı
-Açılan klasörün içinde Lexicons, Sources ve dictionary-install.json bulunmalı. İç içe klasör varsa bu üçünün birlikte bulunduğu seviyeye git. Tek bir PDF seçmek paket kurulumu değildir.
-
-
-
-9. Sözlüğü kur ve kontrol et
-
-İnternete bağlı bir sözlük servisi gerekmez. Arama sonuçları özgün sözlük sayfasına ulaşmanı sağlar.
-
-1. Klasör seç
-Osmanlıca > Sözlük > Sözlük paketini kur > Kurulum klasörünü seç yolunu aç. Dosyalar penceresinde iPhone’umda > Osmanlıca > Sozluk-Paketi içine gir. Lexicons, Sources ve dictionary-install.json birlikte görünürken Aç’a bas.
-
-2. Ön kontrolü oku
-Paket sürümü dictionary-development-2026.10.12.126-latin olmalı. Yaklaşık 488 MB ham veri, 10.294 arama kaydı ve 3 kaynak içerir. Uygulamanın hesapladığı boş alan yeterliyse “Arama indeksini ve kaynakları kur” düğmesine bas.
-
-3. Sonucu dene
-Kurulum tamamlandı mesajını bekle. Devellioğlu PDF’sini aç, sonra aramaya kitab yazıp kitâb sonucunu aç. Cevap olarak özgün madde görüntüsünü görmelisin. Kâmûs-ı Türkî tam PDF olarak okunur; aranabilir madde kaynağı değildir.
-
-4. Özgünleri sakla
-ZIP veya açılmış aktarım klasörünü kaldırmadan önce kurulumun tamamlandığını ve kitapların açıldığını doğrula. Mac’teki ana Sozluk-Paketi kopyasını koru. İşlem yarıda kalırsa uygulamadaki durum ve hata mesajını oku; özgün paketten yeniden seçebilirsin.
-
-
-
-10. 7 günlük yenileme rutini
-
-Ücretsiz imza süresi dolunca uygulama açılmayabilir. Bu, otomatik olarak derslerin silindiği veya arşivin bozulduğu anlamına gelmez.
-
-1. Aynı çalışma kopyasını kullan
-İlk kurduğun Osmanlica.xcodeproj dosyasını aç. Aynı Apple hesabı, aynı Personal Team ve aynı Bundle Identifier ile devam et. Her hafta yeni kimlik oluşturma.
-
-2. Önce yedek al
-Uygulama hâlâ açılıyorsa Bugün > Ayarlar > Dosyalar’a tam yedek aktar yoluyla yedek al. Bu yedeği telefon dışına da kopyala. Güncelleme genellikle veriyi korur; tek koruman buna güvenmek olmasın.
-
-3. Yeniden kur
-Telefonu kabloyla bağla, kilidini aç, Xcode hedefinden telefonunu seç ve Command + R yap. Mac’in internete erişimi olsun; Xcode yeni imza/profil isteyebilir. Uygulamayı telefondan silme.
-
-4. Veri görünmüyorsa dur
-İki Osmanlıca simgesi oluştuysa veya ilerleme boş görünüyorsa farklı hesap/kimlik kullanılmış olabilir. Eski uygulamayı silme. Yeni kimlikle devam etmen gerekiyorsa eski uygulamadan alınmış tam yedeği açıkça geri yükle. Hesap değiştirerek eski uygulamanın verisinin kendiliğinden geleceğini varsayma.
-
-Apple şu anda ücretsiz hesaplarda 7 günlük profil, en fazla 3 aygıt ve aygıt başına 3 uygulama sınırı bildiriyor. Gelecekte kuralları Apple’ın resmî sayfasından tekrar kontrol et.
-
-11. İlerlemeni telefon dışında koru
-
-Arşiv, uygulama ve içeriği kurtarır. Bugünden sonra yapacağın çalışmaların korunması için ayrıca kendi güncel yedeklerini alman gerekir.
-
-1. Tam yedek oluştur
-Bugün > Ayarlar > Dosyalar’a tam yedek aktar seç. Hazırlığın bitmesini bekle. Dosyalar penceresinde iPhone’umda > Osmanlıca gibi bulabileceğin bir yere kaydet; sözlük kurulum klasörünün içine koyma.
-
-2. Mac’e ikinci kopya
-Telefon bağlıyken Finder > iPhone > Files > Osmanlıca bölümündeki yedeği Mac’e sürükle. Tarih eklenmiş ayrı klasörde sakla; önceki sağlam yedeği hemen silme. Yedek bir paket/klasör olarak görünürse tümünü birlikte taşı.
-
-3. Geri yükleme
-Yedeği yeniden telefona taşı. Osmanlıca > Ayarlar > Yedekten geri yükle ile seç. Önizlemede dosyaları, kayıt sayısını ve gerekli boş alanı incele. Onay verdiğinde mevcut veriler yedekteki hâline döner; önce mevcut durumun da yedeğini al.
-
-4. Saklama kuralı
-En az iki bağımsız fiziksel kopya tut: örneğin Mac ve harici disk. Aynı diskte iki klasör disk arızasına karşı koruma değildir. 04 klasöründeki tarihî denetim yedeklerini kendi son çalışman sanıp geri yükleme.
-
-
-
-12. Sorun olduğunda bu sayfaya dön
-
-Hata mesajını aynen oku. Çözüm olarak uygulamayı silmek veya rastgele hesap değiştirmek ilk adım değildir.
-
-Signing / App Groups hatası
-01 içindeki Proje’yi açtığını kontrol et. Ücretsiz kopyada tek Osmanlica hedefi olmalı; App Groups görünmemeli. 02’deki eski projeyi açmış olabilirsin. Gerekirse sayfa 15’teki --personal yardımcısını yalnız çalışma kopyasında kullan.
-
-Identifier not available / süre doldu
-İlk kurulumda kimlik alınmışsa kendine özgü bir Bundle Identifier seç. Daha önce çalışan kurulumda süre dolmuşsa kimliği değiştirmek yerine aynı hesapla yeniden Run yap. Ücretsiz uygulama sınırına ulaştıysan Xcode mesajını izle; silmeden önce ilgili uygulamanın yedeğini al.
-
-Telefon veya klavye görünmüyor
-Kablo veri taşımalı, kilit açık olmalı. Xcode > Devices and Simulators durumunu oku. Mac’in telefon denetim aracı ekran klavyesini gizlediyse denetim bağlantısını kapatıp klavyeyi yeniden dene; uygulama verisini silme.
-
-Derleme / kaynak dosyası hatası
-Klasörü tüm alt dosyalarıyla kopyaladığını ve bulut indirmelerinin bittiğini kontrol et. Native/build/CFSRSOptimizer.xcframework eksikse özgün arşivden geri al. Yeni Xcode eski Swift koduna uyarlama gerektirebilir; bu olasılık arşivle tamamen ortadan kalkmaz.
-
-Sözlük paketi bulunamadı
-PDF’yi veya ZIP’i değil, dictionary-install.json ile Lexicons ve Sources’un beraber durduğu klasörü seç. Boş alan yetmiyorsa kişisel yedekleri silmeden güvenli bir başka yere taşı. Uygulamanın veri klasörlerini elle değiştirme.
-
-
-
-13. Yedek yol: Mac’te simülatör
-
-Telefon veya Apple hesabı hazır değilken Mac’te öğrenmeye başlayabilirsin. Simülatör Mac üzerinde çalışır; iPhone’un içinde çalışan bir sistem değildir.
-
-1. Runtime yükle
-Xcode > Settings > Components / Platforms bölümünden uygun iOS Simulator bileşenini indir. Menü adı Xcode sürümüne göre değişebilir. Apple Silicon uyumlu, iOS 26 veya üzeri bir simülatör kullan.
-
-2. Simülatörü seç
-Aynı Osmanlica.xcodeproj açıkken üstte Osmanlica şemasını seç. Yanındaki hedef listesinden iPhone 17 Pro Max veya başka bir iPhone Simulator seç. Bu işlem gerçek telefonuna kurulum yapmaz.
-
-3. Çalıştır
-Command + R yap. İlk açılışta sanal iPhone’un başlamasını bekle. Dersler ve kitaplar uygulamayla birlikte gelir. Mouse tıklaması dokunma, mouse kaydırması liste kaydırması yerine geçer.
-
-4. Sözlük aktarımı
-Bu klasördeki SIMULATOR_DOSYALARI.py yardımcı aracı, yalnız açık tek simülatördeki bu uygulamanın Documents klasörünü gösterir veya sözlük paketini oraya kopyalar. Kullanımı sayfa 15’te. Ardından uygulama içinde sayfa 9’daki klasör seçimiyle kur.
-
-5. Ayrı kayıtlar
-Simülatörün ilerlemesi telefona otomatik gitmez. Tam yedekle taşı. Simulator > Erase All Content and Settings veya uygulamayı silme, sanal cihazdaki kayıtlarını kaldırabilir. Önce dışarı yedek al.
-
-
-
-14. Neler var, neler farklı?
-
-Ücretsiz kurulum için içerik azaltılmadı. Hesap yetkisi gerektiren paylaşım yolu ayrı tutuldu.
-
-Korunan içerik ve işlevler
-38 ders; 125 ders, 707 sınırsız çalışma, 17 değerlendirme ve 21 yoklama grubu; 55 PDF kitap; 75 tekrar kartı tanımı ve 90 okuma. Kaynak görüntüsü, durdurup sürdürme, FSRS tekrarı, notlar ve yedekleme aynı kaynak temeline dayanır.
-
-Ücretsiz kopyadaki fark
-Safari veya Fotoğraflar’ın Paylaş menüsünde Osmanlıca hedefi bulunmaz. Uygulama içinden Kütüphane > + > Dosya içe aktar ile PDF/görüntü/metin; Metin veya bağlantı seçeneğiyle URL eklenebilir. App Group kullanımı bu kopyada kapalıdır.
-
-Sözlük sınırı
-10.294 arama kaydı Devellioğlu’nun Latin başlıklarından gelir. Osmanlı harfli Kâmûs PDF olarak saklanır. Her kelimeyi metne bağlayan otomatik sistem veya görüntüden yazı tanıma yoktur. Esas başvuru özgün madde görüntüsüdür.
-
-Hazır IPA ve eski hesap
-Hazir-IPA ve 06’daki arşiv eski ücretli takımın 1.0.0 (5) çıktısıdır. Yeni ücretsiz hesap için kullanacağın yol kaynak kodudur. Şifreler ve özel imzalama anahtarları pakete konmadı; Xcode yeni hesabınla yenilerini oluşturur.
-
-Doğrulamanın sınırı
-55 kitap ile sözlük dosyalarının SHA-256 kontrolü ve boş önbellekle çevrimdışı Rust bağımlılık çözümü geçti. Ücretsiz hesapla gerçek iPhone imzalama testi bu arşiv hazırlığında yapılmadı. Ayrıntılı güncel sonuçlar DOGRULAMA-SONUCU.json dosyasındadır.
-
-
-
-15. Yardımcı araçları kullanma
-
-Normal iPhone kurulumu için Terminal zorunlu değildir. Bu sayfa bütünlük kontrolü, yapılandırmayı geri alma ve simülatör dosyalarına erişim içindir.
-
-Terminal’de klasöre girme
-Terminal’i aç. cd yaz, ardından bir boşluk bırak. Finder’daki hedef klasörü Terminal’e sürükle; yol otomatik gelir. Enter’a bas. Kopyaladığın komutlarda başka kişinin eski kullanıcı adını kullanma.
-
-Arşiv bütünlüğü
-01-Sifirdan-Kurulum klasöründeyken python3 BUTUNLUGU_KONTROL_ET.py çalıştır. Bu işlem dosya silmez ve internete gitmez. Özgün kopyada “uygun” beklenir. Xcode’da kimlik değiştirilen çalışma kopyasında ilgili ayar dosyalarının değişmesi normaldir; esas arşivi ayrı tut.
-
-Ücretsiz yapılandırmayı geri alma
-Yeniden-Derleme/Proje klasöründeyken python3 KURULUM_AYARLA.py --personal çalıştır. Xcode ayarları yeniden üretilir; sonra Team ve Bundle Identifier’ı daha önce kaydettiğin aynı değerlerle seç. Kişisel veriye dokunmaz ama proje ayarını değiştirir.
-
-Simülatör dosyaları
-01 klasöründeyken python3 SIMULATOR_DOSYALARI.py --show çalıştır; dönen Documents yoluna Finder > Git > Klasöre Git ile ulaş. Sözlük kopyalamak için --copy-dictionary kullan. Kimliği değiştirdiysen --bundle com.adin.osmanlica2031 ekle. Tek bir simülatör açık olmalı; uygulama önce kurulmuş olmalı.
-
-Python yoksa
-python3 bulunamadı hatası alırsan Python 3’ü python.org resmî sitesinden kur. Bu yardımcılar ek Python paketi istemez. Python yüklemek iPhone’a uygulama kurmak veya hesabına giriş yapmak değildir.
-
-
-
-16. Beş yıl sonrası için teknik notlar
-
-Kaynakların korunması eski hesap bağımlılığını kaldırır. Apple’ın gelecekteki sistem ve imzalama kurallarını sabitlemez.
-
-Yerel kütüphane
-Native/build/CFSRSOptimizer.xcframework hazırdır; normal Xcode derlemesi için Rust kurmak gerekmez. FSRS kaynakları Native/FSRSOptimizer, sabit sürümler Cargo.lock ve bağımlılık kaynakları vendor içinde bulunur.
-
-Rust yeniden derlenecekse
-Rust’ı resmî rust-lang.org araçlarından kur. Bu arşivin sürümü rustc/cargo 1.98.1’dir. rustup target add aarch64-apple-darwin aarch64-apple-ios aarch64-apple-ios-sim komutuyla hedefleri edin. Proje klasöründeyken sh scripts/build_rust.sh çalıştır. İlk derleyici ve hedef kurulumu internet ister; vendor yalnız paket kaynaklarını içerir.
-
-Ücretli üyelik sonradan seçilirse
-Ayrı bir çalışma kopyasında python3 KURULUM_AYARLA.py --paid --team TAKIMKODUN --bundle com.adin.osmanlica komutunu kendi 10 karakterli Team ID’nle kullan. App Group ve paylaşım uzantısı yeniden eklenir. Ücretsiz yol için bu adım gerekmez. Gerçek hesabın izinlerini Xcode’da ayrıca tamamlamak gerekir.
-
-Arşiv sınırları
-macOS, Xcode, iOS Simulator ve Rust yükleyicileri bu pakette yoktur. Tamamen internetsiz yeni Mac kurulumunu tek başına sağlamaz. Tarihî envanterde bulunamayan 29 eski dosya yolu kayıtlıdır; bunlar aktif 55 kitap ve üç sözlüğün eksik olduğu anlamına gelmez. Kaynak araştırma araçlarının bazı eski yolları taşınabilir uygulama derlemesi için gerekli değildir.
-
-Kişisel koruma
-Kaynak kitapların arşivde bulunması herkese açık dağıtım hakkı anlamına gelmez. Bu paket kişisel kurtarma amacıyla hazırlanmıştır. Özel notların/yedeklerin bulunduğu büyük arşivi rastgele paylaşma.
-
-
-
-17. Son kontrol ve resmî başvuru
-
-Kurulum bittiğinde aşağıdaki kısa turu tamamla; sonra arşivi güvenli yere kaldırıp çalışma kopyasını haftalık yenileme için sakla.
-
-Telefon kontrolü
-Uygulama simgesinden açılıyor. Bir ders ve tam kaynak kitabı açılıyor. Sözlük kurulduysa kitab araması ve özgün madde görüntüsü geliyor. Bir yer imi ekleyip uygulamayı kapatıp açınca korunuyor.
-
-Yedek kontrolü
-Tam yedeği dışa aktarabiliyorsun. Mac’te bunun ayrı kopyası var. Hesabını ve Bundle Identifier değerini kendi notuna yazdın. Haftalık yenilemede uygulamayı silmeyeceğini biliyorsun.
-
-Arşiv kontrolü
-01 klasörü tek başına mevcut; SHA-256 denetim aracı çalışıyor. İkinci harici kopya var. Kılavuz PDF’si ve düz metin sürümü okunuyor. İleride yaptığın değişiklikleri tarihli ayrı arşive al; bu kopyayı üstüne yazarak kaybetme.
-
-Apple: ücretsiz hesap ve süreler
-developer.apple.com/help/account/basics/about-your-developer-account
-
-Apple: takım ve çalıştırma
-help.apple.com/xcode/mac/current/en.lproj/dev23aab79b4.html
- developer.apple.com/documentation/xcode/building-and-running-an-app
-
-Apple: Geliştirici Modu ve bileşenler
-developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device
- developer.apple.com/documentation/xcode/downloading-and-installing-additional-xcode-components
-
-Rehber tarihi: 15 Ekim 2026. Apple bağlantıları değişirse resmî sitede başlıkları arat. Bu belge gelecekteki Apple koşullarını veya her yeni SDK ile değişikliksiz derlenmeyi garanti etmez.
+[Sorun bildir](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/issues): iOS/Xcode sürümünü, hafif/tam seçimini ve hata metnini belirt. Özel yedeğini veya hesap bilgilerini paylaşma.

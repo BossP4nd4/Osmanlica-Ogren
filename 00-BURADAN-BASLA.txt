@@ -1,27 +1,69 @@
-OSMANLICA TAM PROJE ARŞİVİ - 15 EKİM 2026
+Güncel kurulum ve dosya seçimi:
+https://github.com/BossP4nd4/Osmanlica-Ogren-Apple
 
-Sıfırdan kendi iPhone'una kurmak için:
-01-Sifirdan-Kurulum/00-ONCE-BUNU-OKU.txt ile başla.
-Aynı yerde 17 sayfalık görselli PDF ve düz metin kılavuz vardır.
-01 klasörü bağımsız taşınabilir; diğer klasörlere başvurmak zorunda değildir.
-Ücretsiz hesap yolu 7 günlük yenileme gerektirir.
+# Osmanlıca · iPhone / iPad
 
-02: Kaynak kodu, araştırmalar, test kayıtları ve tarihli geliştirme çıktıları.
-03: Sağlanan özgün kaynak kitaplar ve belgeler.
-04: Tarihli cihaz denetim kopyaları; güncel kişisel yedek değildir.
-05: Rust bağımlılıklarının ek arşiv kopyası; 01 içinde de bulunurlar.
-06: Eski hesapla imzalı Xcode arşivi; gelecek kurulumun tek dayanağı değildir.
+**Osmanlıca okumayı dersler, kaynak açıklamaları ve uygulamalı çalışmalarla öğren.**
 
-Boyut: 01 yaklaşık 4,3 GB. Tüm arşiv ortak disk bağlantıları sayesinde bu
-diskte yaklaşık 50 GB; başka diske kopyalanınca mantıksal boyuta genişleyebilir.
-128 GB veya daha büyük taşıyıcı tercih et. Ana kopyayı koru, çalışma kopyası aç.
+**Güncel: 1.2.0 (7)** · iOS 26+ · 20 Ekim 2026 yayını
 
-envanter.json tarihî kaynak kopyasının dosya/hash kayıtlarını içerir.
-29 eski dış dosya yolu bulunamadı olarak kayıtlıdır; bunu tüm tarihî
-malzemelerin eksiksiz olduğu şeklinde yorumlama. Aktif 55 PDF ile sözlük
-paketinin 3 PDF'si ayrıca denetlendi. Hesap parolaları ve özel imzalama
-anahtarları dahil değildir. Bu özel arşiv kamuya dağıtım için hazırlanmadı.
+[Android sürümü](https://github.com/BossP4nd4/Osmanlica-Ogren-Android) · [Tüm indirmeler](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/tag/v1.2.0)
 
-SAKLAMA NOTU: Oluşturma sırasında Masaüstü iCloud eşzamanlaması kota dolu
-hatası gösterdi. Yerel dosyalar vardır; bulut kopyası tamamlandı sayılmamalıdır.
-Harici disk kopyasını ayrıca doğrula.
+## Önce hangi dosyaları indireceğini seç
+
+**İlk kurulum için Apple Silicon Mac, uygun Xcode, Apple hesabı ve iPhone gerekir.** Bu yayın App Store bağlantısı değildir. Normal kurulum yolu kaynak projeyi Xcode’da kendi hesabınla derlemektir.
+
+| Sıra | Dosya | İndirme boyutu |
+| --- | --- | --- |
+| 1 | [⬇ Kaynak proje — Mac’e indir](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Kaynak-Kod.zip) | 33.3 MB |
+| 2A | [⬇ Hafif ders içeriği](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Hafif-Icerik.zip) | 92.8 MB |
+| 2B | [⬇ Tam kitaplık](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Tam-Kitaplik.zip) | 1730.9 MB |
+| 3 | [⬇ Sözlük paketi — iki seçenek için de aynı](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Sozluk.zip) | 403.5 MB |
+
+**2A veya 2B’den yalnız birini seç.** Sözlüğü kullanmak için 3’ü de indir. Uygulamanın içinde kitapların ikinci bir PDF kopyası yoktur; ilk açılışta ders paketini ayrıca kurarsın.
+
+> **iOS’ta ZIP’i Dosyalar uygulamasında açıp içindeki klasörü seçersin.** Android’deki ZIP’i doğrudan seçme yöntemi burada geçerli değildir.
+> GitHub’ın **Code → Download ZIP** veya otomatik **Source code** dosyaları yukarıdaki paketlerin yerine geçmez.
+
+## 1. Uygulamayı Mac’ten iPhone’a kur
+
+1. Kaynak ZIP’ini Mac’te aç. **Proje → Osmanlica.xcodeproj** dosyasını Xcode ile aç; `Package.swift` dosyasını seçme.
+2. Xcode → Settings → Accounts bölümünden Apple hesabını ekle.
+3. Projede **Osmanlica** hedefi → **Signing & Capabilities** → **Automatically manage signing** seçili olsun. **Team** olarak kendi hesabını seç.
+4. İlk kurulumda kendine özgü Bundle Identifier belirle; örneğin `com.adin.osmanlica`. Hesabı ve kimliği sakla; güncellemelerde aynılarını kullan.
+5. iPhone’u kabloyla bağla, güven istemini onayla. Gerekiyorsa iPhone’daki **Ayarlar → Gizlilik ve Güvenlik → Geliştirici Modu** adımlarını tamamla.
+6. Xcode üst çubuğunda **Osmanlica** şeması ve kendi iPhone’un seçiliyken **Run / ▶** düğmesine bas. İstenirse iPhone’da geliştiriciye güven adımını tamamla.
+
+Bu taşınabilir proje paylaşım uzantısı/App Group gerektirmeyen kurulum kopyasıdır; uygulamanın içinden dosya ekleyebilirsin. Hazır yerel kütüphaneler vardır; normal kurulumda Rust derlemek gerekmez.
+
+**Ücretsiz Apple hesabında yenileme:** Personal Team imzasının profili 7 gün sonra sona erer; aynı hesap ve Bundle Identifier ile Xcode’dan yeniden derleyip yükle. Uygulamayı silme. [Apple’ın açıklaması](https://developer.apple.com/help/account/basics/about-your-developer-account).
+
+## 2. Hafif veya tam ders paketini kur
+
+1. Seçtiğin ders ZIP’ini Finder → iPhone → Dosyalar → Osmanlıca üzerinden telefona aktar.
+2. Telefonda **Dosyalar → iPhone’umda → Osmanlıca** içinde ZIP’e dokunup aç.
+3. Uygulamanın ilk açılışında **Ders kurulum klasörünü seç**’e dokun.
+4. Açılan **Hafif-Icerik** veya **Tam-Kitaplik** klasörüne gir. **catalog.json ve Assets** birlikte görünürken **Aç**’a bas.
+5. Ön kontroldeki içerik seçimini ve boş alanı kontrol et; **Kitapları ve çalışmaları kur** ile tamamla.
+
+Tek PDF’yi, ZIP dosyasını veya bir üst klasörü seçme. Sonrasında bir ders ve kaynak sayfasını açarak kontrol et.
+
+## 3. Sözlüğü ekle
+
+1. Sözlük ZIP’ini de telefona aktar ve Dosyalar’da aç.
+2. **Sözlük → Sözlük paketini kur → Kurulum klasörünü seç** yolunu aç.
+3. **Sozluk-Paketi** içine gir: **Lexicons, Sources ve dictionary-install.json** birlikte görünürken klasörü seç.
+4. Kurulumdan sonra `kitab` aramasını, sözlük maddesini ve tam kaynak sayfasını kontrol et.
+
+**Depolama:** Sözlük dahil temel dosya toplamı hafifte yaklaşık **608 MB**, tam kitaplıkta yaklaşık **2,37 GB**. Bunlar telefonun Ayarlar ekranıyla birebir aynı ölçüm değildir. Aktarım ZIP’leri, açılmış kopyalar, kişisel kayıtlar ve önbellek ek yer ister. Kullanılmış kurulumda eski cevapların kaynak kanıtları da saklanabilir.
+
+## Mevcut kurulumdan güncelleme ve paket değiştirme
+
+1. Eski uygulamada **Bugün → Ayarlar → Dosyalar’a tam yedek aktar** ile yedek al; Mac’te ayrı bir kopya tut.
+2. Yeni kaynak projeyi aynı Apple hesabı ve **aynı Bundle Identifier** ile mevcut uygulamanın üzerine yükle. Uygulamayı önceden silme.
+3. Bu yayının yeni ders paketlerinden birini indir. **Ayarlar → ders/içerik güncellemeleri → Hafif içerik / Tam kitaplık** üzerinden açılmış klasörü seçip kurulumu tamamla.
+4. Kayıtlarını, notlarını ve tekrarlarını kontrol et. Paket geçişinde bunlar korunur; hafifte olmayan sayfalardaki yer imleri tam kitaplık için saklanır.
+5. Sözlük paketi bu güncellemede genişletilmedi; kurulu sözlük düzgün açılıyorsa tekrar kurman gerekmez.
+
+İki uygulama simgesi veya boş ilerleme görürsen farklı hesap/kimlik kullanılmış olabilir; eski uygulamayı silmeden yedeğini koru. İçerik ve kayıtlar doğrulandıktan sonra yalnız aktarım ZIP’lerini/açılmış aktarım klasörlerini kaldır; uygulamanın verilerini silme.
+

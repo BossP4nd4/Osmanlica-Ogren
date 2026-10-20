@@ -1,116 +1,94 @@
-<p align="center"><img src="kapak.svg" alt="Osmanlıca — Oku, anla, tekrar et" width="100%"></p>
-<p align="center"><strong>Osmanlıca öğrenmek için dersler, kitaplar ve sözlük içeren iPhone uygulaması.</strong></p>
+# Osmanlıca · iPhone / iPad
 
-## Önce bunu bil
+**Osmanlıca okumayı dersler, kaynak açıklamaları ve uygulamalı çalışmalarla öğren.**
 
-**Bu uygulama iPhone'a bir dosyaya dokunarak kurulmaz.** Bu sayfada uygulamanın kaynak projesi paylaşılır. Kurulum için **Apple Silicon işlemcili bir Mac (M serisi), Xcode ve iOS 26 veya üzeri bir iPhone** gerekir. Yalnızca iPhone'un varsa aşağıdaki yöntemle kurulum yapamazsın.
+**Güncel: 1.2.0 (7)** · iOS 26+ · 20 Ekim 2026 yayını
 
-Xcode, Apple'ın uygulama geliştirme programıdır. Projeyi bu programda açıp kendi Apple hesabınla telefonuna yükleyeceksin. Ücretsiz Apple hesabıyla kurulumda **7 günde bir Xcode üzerinden yeniden yükleme** gerekir.
+[Android sürümü](https://github.com/BossP4nd4/Osmanlica-Ogren-Android) · [Tüm indirmeler](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/tag/v1.2.0)
 
-## 1. Hangi dosyayı indireceğim?
+## Önce hangi dosyaları indireceğini seç
 
-**İlk kez kuruyorsan yalnızca aşağıdaki ilk dosyayı indirerek başla:**
+**İlk kurulum için Apple Silicon Mac, uygun Xcode, Apple hesabı ve iPhone gerekir.** Bu yayın App Store bağlantısı değildir. Normal kurulum yolu kaynak projeyi Xcode’da kendi hesabınla derlemektir.
 
-### [⬇ Uygulamayı kurmak için gereken dosyayı indir — 1,90 GB](https://github.com/BossP4nd4/Osmanlica-Ogren/releases/download/v1.0.0-arsiv.20261015/01-kaynak-kod-ve-kilavuzlar.zip)
+| Sıra | Dosya | İndirme boyutu |
+| --- | --- | --- |
+| 1 | [⬇ Kaynak proje — Mac’e indir](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Kaynak-Kod.zip) | 33.3 MB |
+| 2A | [⬇ Hafif ders içeriği](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Hafif-Icerik.zip) | 92.8 MB |
+| 2B | [⬇ Tam kitaplık](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Tam-Kitaplik.zip) | 1730.9 MB |
+| 3 | [⬇ Sözlük paketi — iki seçenek için de aynı](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Sozluk.zip) | 403.5 MB |
 
-Dosyanın adı: `01-kaynak-kod-ve-kilavuzlar.zip`. İçinde uygulamanın Xcode projesi, dersler, 55 kitap ve ayrıntılı kurulum kılavuzları var.
+**2A veya 2B’den yalnız birini seç.** Sözlüğü kullanmak için 3’ü de indir. Uygulamanın içinde kitapların ikinci bir PDF kopyası yoktur; ilk açılışta ders paketini ayrıca kurarsın.
 
-| Diğer dosya | İndirmem gerekiyor mu? |
+> **iOS’ta ZIP’i Dosyalar uygulamasında açıp içindeki klasörü seçersin.** Android’deki ZIP’i doğrudan seçme yöntemi burada geçerli değildir.
+> GitHub’ın **Code → Download ZIP** veya otomatik **Source code** dosyaları yukarıdaki paketlerin yerine geçmez.
+
+## 1. Uygulamayı Mac’ten iPhone’a kur
+
+1. Kaynak ZIP’ini Mac’te aç. **Proje → Osmanlica.xcodeproj** dosyasını Xcode ile aç; `Package.swift` dosyasını seçme.
+2. Xcode → Settings → Accounts bölümünden Apple hesabını ekle.
+3. Projede **Osmanlica** hedefi → **Signing & Capabilities** → **Automatically manage signing** seçili olsun. **Team** olarak kendi hesabını seç.
+4. İlk kurulumda kendine özgü Bundle Identifier belirle; örneğin `com.adin.osmanlica`. Hesabı ve kimliği sakla; güncellemelerde aynılarını kullan.
+5. iPhone’u kabloyla bağla, güven istemini onayla. Gerekiyorsa iPhone’daki **Ayarlar → Gizlilik ve Güvenlik → Geliştirici Modu** adımlarını tamamla.
+6. Xcode üst çubuğunda **Osmanlica** şeması ve kendi iPhone’un seçiliyken **Run / ▶** düğmesine bas. İstenirse iPhone’da geliştiriciye güven adımını tamamla.
+
+Bu taşınabilir proje paylaşım uzantısı/App Group gerektirmeyen kurulum kopyasıdır; uygulamanın içinden dosya ekleyebilirsin. Hazır yerel kütüphaneler vardır; normal kurulumda Rust derlemek gerekmez.
+
+**Ücretsiz Apple hesabında yenileme:** Personal Team imzasının profili 7 gün sonra sona erer; aynı hesap ve Bundle Identifier ile Xcode’dan yeniden derleyip yükle. Uygulamayı silme. [Apple’ın açıklaması](https://developer.apple.com/help/account/basics/about-your-developer-account).
+
+## 2. Hafif veya tam ders paketini kur
+
+1. Seçtiğin ders ZIP’ini Finder → iPhone → Dosyalar → Osmanlıca üzerinden telefona aktar.
+2. Telefonda **Dosyalar → iPhone’umda → Osmanlıca** içinde ZIP’e dokunup aç.
+3. Uygulamanın ilk açılışında **Ders kurulum klasörünü seç**’e dokun.
+4. Açılan **Hafif-Icerik** veya **Tam-Kitaplik** klasörüne gir. **catalog.json ve Assets** birlikte görünürken **Aç**’a bas.
+5. Ön kontroldeki içerik seçimini ve boş alanı kontrol et; **Kitapları ve çalışmaları kur** ile tamamla.
+
+Tek PDF’yi, ZIP dosyasını veya bir üst klasörü seçme. Sonrasında bir ders ve kaynak sayfasını açarak kontrol et.
+
+## 3. Sözlüğü ekle
+
+1. Sözlük ZIP’ini de telefona aktar ve Dosyalar’da aç.
+2. **Sözlük → Sözlük paketini kur → Kurulum klasörünü seç** yolunu aç.
+3. **Sozluk-Paketi** içine gir: **Lexicons, Sources ve dictionary-install.json** birlikte görünürken klasörü seç.
+4. Kurulumdan sonra `kitab` aramasını, sözlük maddesini ve tam kaynak sayfasını kontrol et.
+
+**Depolama:** Sözlük dahil temel dosya toplamı hafifte yaklaşık **608 MB**, tam kitaplıkta yaklaşık **2,37 GB**. Bunlar telefonun Ayarlar ekranıyla birebir aynı ölçüm değildir. Aktarım ZIP’leri, açılmış kopyalar, kişisel kayıtlar ve önbellek ek yer ister. Kullanılmış kurulumda eski cevapların kaynak kanıtları da saklanabilir.
+
+## Mevcut kurulumdan güncelleme ve paket değiştirme
+
+1. Eski uygulamada **Bugün → Ayarlar → Dosyalar’a tam yedek aktar** ile yedek al; Mac’te ayrı bir kopya tut.
+2. Yeni kaynak projeyi aynı Apple hesabı ve **aynı Bundle Identifier** ile mevcut uygulamanın üzerine yükle. Uygulamayı önceden silme.
+3. Bu yayının yeni ders paketlerinden birini indir. **Ayarlar → ders/içerik güncellemeleri → Hafif içerik / Tam kitaplık** üzerinden açılmış klasörü seçip kurulumu tamamla.
+4. Kayıtlarını, notlarını ve tekrarlarını kontrol et. Paket geçişinde bunlar korunur; hafifte olmayan sayfalardaki yer imleri tam kitaplık için saklanır.
+5. Sözlük paketi bu güncellemede genişletilmedi; kurulu sözlük düzgün açılıyorsa tekrar kurman gerekmez.
+
+İki uygulama simgesi veya boş ilerleme görürsen farklı hesap/kimlik kullanılmış olabilir; eski uygulamayı silmeden yedeğini koru. İçerik ve kayıtlar doğrulandıktan sonra yalnız aktarım ZIP’lerini/açılmış aktarım klasörlerini kaldır; uygulamanın verilerini silme.
+
+## Bu güncellemede neler var?
+
+- **38 ders ve 874 çalışma.** Derslere 171 kaynak açıklaması, 15 etkileşimli tablo ve 401 tablo hücresi; 149 kısa örnek ve bütünlüklü okumalar eşlik ediyor.
+- **Hafif içerik / Tam kitaplık:** aynı dersler, açıklamalar ve çalışmalar; farklı kitap erişimi ve depolama kullanımı.
+- Hafif içerik, düşük çözünürlüklü ekran görüntüsü veya ders özeti değildir. Dersler için gereken **573 özgün PDF sayfası**, özgün sayfa numaralarıyla korunur.
+- Tam kitaplık, 55 ders PDF’sinin **14.318 sayfasına** erişim sağlar. Üç sözlük PDF’si her iki seçenekte de tamdır; sözlük kapsamı bu güncellemede artırılmadı.
+- İlgili dosyalar doğrulanıp kurulduktan sonra içerik seçimi değişir. Hafifte erişilemeyen sayfalardaki yer imleri, tam kitaplığa dönüldüğünde kullanılmak üzere saklanır.
+
+## Hafif mi, tam mı?
+
+| İhtiyacın | Seçim |
 | --- | --- |
-| [02-sozluk-paketi.zip — 413 MB](https://github.com/BossP4nd4/Osmanlica-Ogren/releases/download/v1.0.0-arsiv.20261015/02-sozluk-paketi.zip) | **Sözlük kullanmak istiyorsan indir.** Önce uygulamayı kur; sonra aşağıdaki sözlük adımlarını uygula. |
-| [03-hazir-ipa.zip — 1,73 GB](https://github.com/BossP4nd4/Osmanlica-Ogren/releases/download/v1.0.0-arsiv.20261015/03-hazir-ipa.zip) | **İlk kurulum için gerekmez.** Eski hesapla imzalanmış uygulama arşividir; indirip dokunarak kendi telefonuna kuramazsın. |
-| PAKETLERI_AC.py, SHA256SUMS.txt, DOSYA-ENVANTERI.json | **Normal kurulum için gerekmez.** Tam arşivi açmak ve dosyaları kontrol etmek isteyenler içindir. |
-| Source code (zip), Source code (tar.gz) | **Bunları indirme.** GitHub'ın otomatik oluşturduğu bu dosyalar büyük uygulama paketini içermez. |
+| Dersleri ve alıştırmaları çalışmak; telefonda daha az yer kullanmak | **Hafif içerik** |
+| Kaynak kitapların ders dışında kalan sayfalarını da okumak | **Tam kitaplık** |
 
-> Yukarıdaki büyük indirme bağlantısı doğrudan doğru dosyayı indirir. Yeşil **Code → Download ZIP** düğmesini kullanma.
+İki içerik paketini birlikte indirmen gerekmez. Sonradan diğerine geçebilirsin. Kişisel kayıtlar, yedekler, aktarım dosyaları ve önbellek ayrıca yer kaplar.
 
-## 2. İndirdiğim ZIP'i nasıl açacağım?
+## Kılavuz ve isteğe bağlı dosyalar
 
-1. Mac'te **Finder → İndirilenler** klasörüne git.
-2. `01-kaynak-kod-ve-kilavuzlar.zip` dosyasına çift tıkla ve açılmasını bekle.
-3. Açılan dosyaların içinde **01-Sifirdan-Kurulum** klasörünü bul. Finder bir üst klasör oluşturduysa önce onun içine gir.
-4. Sırasıyla **Yeniden-Derleme → Proje** klasörlerini aç.
-5. Buradaki **Osmanlica.xcodeproj** dosyası bir sonraki adımda açacağın projedir.
+- [20 sayfalık görselli kurulum kılavuzu](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-Kurulum-Kilavuzu.pdf). Kılavuzdaki `Yeniden-Derleme/Proje` yolu bu GitHub kaynak ZIP’inde doğrudan **Proje** klasörüdür. `Ders-Paketleri` ve `Sozluk-Paketi` ayrı indirmeler olarak sunulmuştur.
+- [Hazır imzalı IPA (isteğe bağlı)](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/Osmanlica-iOS-1.2.0.ipa). Özgün geliştirici hesabına bağlıdır; herkesin indirip dokunarak kurabileceği bir paket değildir. Yeni ücretsiz hesapla kurulum için kaynak proje yolunu kullan.
+- [Dosya doğrulama değerleri (SHA-256)](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/releases/download/v1.2.0/SHA256SUMS.txt).
 
-Aradığın dosyanın yolu:
+Kaynak ZIP’inde uygulamaya gömülmeyen eski `App/Resources/Prepared` PDF kopyaları tekrarlanmaz; ders kitapları ayrı içerik paketlerindedir. Özel yerel imzalama ayarı ve kişisel cihaz yedekleri paylaşılmaz.
 
-```text
-01-Sifirdan-Kurulum → Yeniden-Derleme → Proje → Osmanlica.xcodeproj
-```
+**Test durumu:** Yerel rapora göre yeni iOS paketi imzalı derlendi; kurulum/depolama/geçiş çekirdek testleri geçti. Bu yeni sürüm fiziksel iPhone’a kurulmadı; yeni ücretsiz hesapla telefon kurulumu denenmedi. Son yeni kurulum ekranının görsel denetimi tamamlanamadı. Bu GitHub yayını için uygulama yeniden derlenmedi; hazırlanmış güncel dosyalar paketlendi.
 
-**Klasörün içindeki dosyaları tek tek taşıma.** Projeyi, açılmış klasör yapısı korunarak kullan.
-
-## Kurulum
-
-### 3. Uygulamayı iPhone'a nasıl yükleyeceğim?
-
-1. **Mac App Store'dan Xcode'u kur.** İlk kez açıp istediği bileşenlerin kurulumunu tamamla. Xcode'un telefonundaki iOS sürümünü desteklemesi gerekir. Mac'te yaklaşık **35–50 GB boş çalışma alanı** ayır.
-2. Önceki adımda bulduğun **Osmanlica.xcodeproj** dosyasına çift tıklayarak Xcode'da aç.
-3. Üst menüden **Xcode → Settings → Apple Accounts** bölümüne gir ve kendi Apple hesabını ekle.
-4. Xcode'un sol tarafında en üstteki mavi **Osmanlica** proje simgesine tıkla. Ortadaki **TARGETS** listesinden **Osmanlica** öğesini seç, ardından **Signing & Capabilities** sekmesini aç.
-5. **Automatically manage signing** kutusunu işaretle. **Team** alanında kendi hesabını (**Personal Team**) seç. **Bundle Identifier** alanına sana özel bir ad yaz; örneğin `com.adinsoyadin.osmanlica`. Bu ad uygulamanın telefonundaki kimliğidir; sonraki yüklemelerde aynı bırak.
-6. iPhone'unu veri aktarabilen bir kabloyla Mac'e bağla. Telefonda **Bu bilgisayara güven** sorusu çıkarsa onayla. Gerekirse **Ayarlar → Gizlilik ve Güvenlik → Geliştirici Modu** seçeneğini aç ve telefonun yönergelerini tamamla.
-7. Xcode'un üst kısmında çalıştırılacak uygulama olarak **Osmanlica**, cihaz olarak **kendi iPhone'unu** seç. **▶ Run** düğmesine bas veya **⌘R** tuşlarına bas. Derleme ve telefona aktarımın bitmesini bekle.
-8. Telefonda Osmanlıca açıldığında bir dersi ve bir kitabı açarak kontrol et.
-
-**Beklenen sonuç:** iPhone'unda Osmanlıca uygulaması açılır; dersler ve kitaplar kullanılabilir. Sözlük için aşağıdaki ek adım gerekir.
-
-> Bu kaynak arşivinin hazırlık kayıtlarında ücretsiz Personal Team ile gerçek iPhone kurulumu test edilmemiştir. Yukarıdaki yol kurulum yönergesidir; her cihazda hatasız çalıştığı doğrulanmış değildir. Bir adımda hata alırsan [ayrıntılı kılavuza](KURULUM-KILAVUZU.txt) bak veya [sorun bildir](https://github.com/BossP4nd4/Osmanlica-Ogren/issues).
-
-### 4. Sözlüğü de istiyorum — ne yapacağım?
-
-Bu bölüm **isteğe bağlıdır**. Önce uygulamanın telefonunda açıldığından emin ol.
-
-1. [Sözlük paketini indir](https://github.com/BossP4nd4/Osmanlica-Ogren/releases/download/v1.0.0-arsiv.20261015/02-sozluk-paketi.zip). Mac'te bu ZIP'e çift tıkla.
-2. Açılan klasörler içinde **01-Sifirdan-Kurulum → Sozluk-Paketi** yoluna git. `Sozluk-Paketi` klasöründe **dictionary-install.json**, **Lexicons** ve **Sources** birlikte bulunmalı. Bu klasörü ilk indirdiğin projenin içine taşıman gerekmez.
-3. Mac'te **Sozluk-Paketi** klasörüne sağ tıkla → **Sıkıştır**. Oluşan ZIP'i, iPhone bağlıyken Finder'da **iPhone'un → Dosyalar → Osmanlıca** bölümüne sürükle.
-4. iPhone'da **Dosyalar** uygulamasını aç. Aktardığın ZIP'i bul ve dokunarak aç.
-5. Osmanlıca uygulamasında **Sözlük → Sözlük paketini kur → Kurulum klasörünü seç** yolunu izle.
-6. İçinde **dictionary-install.json**, **Lexicons** ve **Sources** bulunan klasörü seç; ön kontrolün ardından kurulumu başlat.
-7. Sözlükte `kitab` araması yap. `kitâb` sonucunu ve kaynak sayfasını açabiliyorsan sözlük kurulmuştur.
-
-## Sık sorulanlar
-
-**Mac'im yok. Sadece iPhone'dan kurabilir miyim?**  
-Bu sayfadaki kurulum yöntemi Mac ve Xcode gerektirir.
-
-**Üç ZIP'i de indirmem gerekiyor mu?**  
-Hayır. Uygulamayı kurmak için **01** yeterlidir. Sözlük için ayrıca **02** gerekir. **03**, normal kurulumun parçası değildir.
-
-**Uygulama bir hafta sonra açılmazsa?**  
-Ücretsiz Apple hesabıyla imzalama süresi 7 gündür. Aynı proje, Apple hesabı ve Bundle Identifier ile telefonu Xcode'a bağlayıp yeniden **⌘R** ile yükle. Uygulamayı silmeden önce ilerlemeni yedekle. [Apple'ın açıklaması](https://developer.apple.com/help/account/basics/about-your-developer-account).
-
-**Kurulumda hata aldım. Ne göndereyim?**  
-[Issues sayfasına](https://github.com/BossP4nd4/Osmanlica-Ogren/issues) takıldığın adımı, hata mesajını ve macOS/Xcode/iOS sürümlerini yaz. Parola veya doğrulama kodu paylaşma.
-
-## Uygulamada neler var?
-
-- 38 ders ve 870 çalışma grubu.
-- 55 PDF kitap ve özgün kaynak sayfaları.
-- Aralıklı tekrar, notlar, yer imleri ve ilerleme yedeği.
-- Ayrı kurulabilen sözlük: 10.294 arama kaydı ve 3 kaynak PDF.
-
-Bu sayılar 15 Ekim 2026 arşivine aittir. Sözlük bütün PDF'lerin tam metin araması değildir. Hazır içerikler ve kurulmuş sözlükler çevrimdışı kullanılabilir.
-
-## Ayrıntılı belgeler
-
-- [Kurulum ve sorun giderme kılavuzu](KURULUM-KILAVUZU.txt)
-- [Şematik görseller içeren PDF kılavuzu](Osmanlica-Kisisel-Kurulum-Kilavuzu.pdf)
-- [Tüm indirme dosyaları](https://github.com/BossP4nd4/Osmanlica-Ogren/releases/tag/v1.0.0-arsiv.20261015)
-
-<details>
-<summary><strong>Tam arşiv, dosya doğrulaması ve teknik ayrıntılar</strong></summary>
-
-Bu bölüm yalnızca bütün arşivi saklamak veya bütünlüğünü doğrulamak isteyenler içindir. Yukarıdaki normal kurulum için gerekli değildir.
-
-Üç ZIP'i ve [PAKETLERI_AC.py](https://github.com/BossP4nd4/Osmanlica-Ogren/releases/download/v1.0.0-arsiv.20261015/PAKETLERI_AC.py) dosyasını aynı klasöre indir. Python 3 kurulu Mac'te Terminal'i bu klasörde açıp `python3 PAKETLERI_AC.py` komutunu çalıştır. Araç üç paketin SHA-256 değerlerini doğrular, sonra yeni bir `Osmanlica-Kurulum` klasörüne açar; mevcut klasörün üzerine yazmaz.
-
-[Paket hash değerleri](SHA256SUMS.txt) · [2.585 dosyanın envanteri](DOSYA-ENVANTERI.json)
-
-Paketlerin içerikleri kaynak dosyalarla SHA-256 düzeyinde karşılaştırıldı. Yeniden açılan arşivde özgün denetleyici 2.580 kayıtlı dosyada sıfır fark buldu. Xcode'da proje ayarları değiştirildiğinde ilgili dosyaların hash değerlerinin değişmesi normaldir.
-
-Arşivin sürüm kaydı Xcode 27.0 ve macOS 26.6.2 belirtir. Xcode ve Apple SDK'ları pakete dahil değildir. Hazır yerel kütüphaneler Apple Silicon içindir; normal kurulumda ayrıca Rust kurmak gerekmez. Ücretsiz kurulum kopyasında paylaşım uzantısı ve App Groups kapalıdır. Simülatör ile telefon ilerlemesi kendiliğinden eşitlenmez.
-
-Bu yayın `00-BURADAN-BASLA.txt`, `PAKET-OZETI.json` ve `01-Sifirdan-Kurulum` klasörünü içerir. Özgün başlangıç notundaki 02–06 klasörleri bu yayının kapsamında değildir. `PAKET-OZETI.json` daha geniş özgün arşivin özetidir; bu yayının kapsamı için dosya envanterini esas al. Uygulama arşivi kişisel çalışma ilerlemesinin yedeği değildir.
-
-</details>
+[Sorun bildir](https://github.com/BossP4nd4/Osmanlica-Ogren-Apple/issues): iOS/Xcode sürümünü, hafif/tam seçimini ve hata metnini belirt. Özel yedeğini veya hesap bilgilerini paylaşma.

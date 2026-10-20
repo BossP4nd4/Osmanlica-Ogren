@@ -1,14 +1,14 @@
 {
-  "date": "2026-10-15",
-  "fileCount": 51762,
-  "logicalBytes": 92293697868,
-  "recoveryFiles": 2580,
-  "recoveryLogicalBytes": 4260065603,
-  "uniqueInodeBytes": 50816515420,
-  "historicalFilesVerified": 46874,
-  "historicalMismatches": [],
-  "symlinks": [],
-  "seconds": 72.89,
-  "cloudBackup": "Not verified; iCloud reports full storage",
-  "freeAccountPhoneInstallation": "Not tested"
+  "version": "1.2.0 (7)",
+  "published": "2026-10-20",
+  "catalog": "published-2026.10.19.1",
+  "lessonCount": 38,
+  "exerciseCount": 874,
+  "contentVariants": [
+    "Hafif içerik",
+    "Tam kitaplık"
+  ],
+  "guide": "README.md",
+  "files": "DOSYA-ENVANTERI.json",
+  "note": "İndirmeler Releases sayfasındadır. 15 Ekim sürümü geçmiş yayın olarak korunur."
 }
